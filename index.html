@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
-  <head>
+<html lang="ar" dir="ltr"
+>  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="syle.css">
     <title>Sude Naz Çimen</title>
   </head>
   <body>
   
-    <nav class="navbar navbar-expand-lg navbar bg-primary" data-bs-theme="white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-bs-theme="white">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Sude Naz Çimen</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +21,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+                <a class="nav-link active" aria-current="page" href="#">Hakkımda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Hakkımda</a>
+                <a class="nav-link" href="#">Özgeçmiş</a>
               </li>
             </li>
             <li class="nav-item">
@@ -32,13 +32,12 @@
             </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Manisa
+                  Şehrim
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Kültür</a></li>
-                  <li><a class="dropdown-item" href="#">Doğal güzellikler</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Tarihi Yerler</a></li>
+                  <li><a class="dropdown-item" href="#">Manisa</a></li>
+                  <li><a class="dropdown-item" href="#">Mirasımız</a></li>
+                  
                 </ul>
               </li>
               <li class="nav-item">
@@ -53,52 +52,48 @@
         </div>
       </nav>
 
-
 <header>
-
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="pexels-jplenio-1103970.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
       </div>
 
 </header>
 
-
-
+<main class="container">
+  <h2 class="text-center mb-5">İletişim Formu</h2>
+  <div class="row">
+      <div class="col-md-6 offset-md-3">
+          <form>
+              <div class="mb-3">
+                  <label for="name" class="form-label">İsim:</label>
+                  <input type="text" id="name" class="form-control">
+              </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Mail:</label>
+                  <input type="email" id="email" class="form-control">
+              </div>
+              <div class="mb-3">
+                  <label for="password" class="form-label">Şifre:</label>
+                  <input type="password" id="password" class="form-control">
+              </div>
+              <select class="form-select" aria-label="Default select exapmle">
+                <option selected>Şehir seçiniz</option>
+                <option value="1">Manisa</option>
+                <option value="2">İzmir</option>
+                <option value="3">Ankara</option>
+              </select>
+              
+             <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Gönder</button>
+            </div>
+          </form>
+      </div>
+  </div>
+</main>
 
 
 
@@ -106,8 +101,32 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="Script.js"></script>
+<script>
+  document.getElementById('validateButton').addEventListener('click', function() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
 
-  
+      // İsim ve e-posta doğrulama işlemleri
+      if (!name) {
+          alert('İsim alanı boş olamaz!');
+          return;
+      }
+      if (!email) {
+          alert('E-posta alanı boş olamaz!');
+          return;
+      }
+
+      // E-posta formatını kontrol et (basit bir kontrol)
+      var emailRegex = /\S+@\S+\.\S+/;
+      if (!emailRegex.test(email)) {
+          alert('Geçerli bir e-posta adresi girin!');
+          return;
+      }
+
+      alert('Form geçerlidir!');
+  });
+</script>
 
   </body>
 </html>
