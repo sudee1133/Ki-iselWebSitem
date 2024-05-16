@@ -11,25 +11,35 @@
     <title>Hakkında</title>
 
     <style>
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-top: 80px; /* Navbarın altına boşluk ekler */
-        }
+          .imagess {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-        .imagess {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
+.imagess img {
+    max-width: 100%; /* Resimlerin maksimum genişliği */
+    height: auto; /* Yüksekliği otomatik olarak ayarla */
+    max-height: 300px; /* Maksimum yükseklik belirleme */
+}
 
-        .imagess img {
-            height: 300px;
-            width: 300px;
-        }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px; /* Navbarın altına boşluk ekler */
+    max-width: 100%; /* Container'ın maksimum genişliği */
+    padding: 0 15px; /* Kenar boşluğu ekleme */
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin-top: 80px; /* Navbarın altına boşluk ekler */
+    }
+}
+
     </style>
 </head>
 <body>
