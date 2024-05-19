@@ -38,7 +38,7 @@
     <h2 class="text-center mb-5">İletişim Formu</h2>
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form>
+            <form id="contactForm">
                 <div class="mb-3">
                     <label for="name" class="form-label">İsim:</label>
                     <input type="text" id="name" class="form-control">
@@ -165,7 +165,86 @@
         </div>
     </div>
   </main>
+ <script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const form = document.getElementById('contactForm');
   
-  <script src="Script.js"></script>
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    // Form elemanlarını alın
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
+    const email = document.getElementById('email');
+    const city = document.querySelector('select.form-select');
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const message = document.getElementById('message');
+    
+    // Formu doğrula
+    if (validateForm(name, surname, email, city, gender, message)) {
+      alert('Form başarıyla gönderildi!');
+      // Burada form verilerini gerçekten göndermek için kod ekleyebilirsiniz
+    }
+  });
+  
+  function validateForm(name, surname, email, city, gender, message) {
+    let isValid = true;
+    
+    // İsim doğrulama
+    if (name.value.trim() === '') {
+      alert('Lütfen isminizi girin.');
+      name.focus();
+      isValid = false;
+    }
+    
+    // Soyisim doğrulama
+    if (surname.value.trim() === '') {
+      alert('Lütfen soyisminizi girin.');
+      surname.focus();
+      isValid = false;
+    }
+    
+    // Email doğrulama
+    if (email.value.trim() === '') {
+      alert('Lütfen email adresinizi girin.');
+      email.focus();
+      isValid = false;
+    } else if (!validateEmail(email.value)) {
+      alert('Lütfen geçerli bir email adresi girin.');
+      email.focus();
+      isValid = false;
+    }
+    
+    // Şehir doğrulama
+    if (city.value === 'Şehir seçiniz') {
+      alert('Lütfen bir şehir seçin.');
+      city.focus();
+      isValid = false;
+    }
+    
+    // Cinsiyet doğrulama
+    if (!gender) {
+      alert('Lütfen cinsiyetinizi seçin.');
+      isValid = false;
+    }
+    
+    // Mesaj doğrulama
+    if (message.value.trim() === '') {
+      alert('Lütfen mesajınızı girin.');
+      message.focus();
+      isValid = false;
+    }
+    
+    return isValid;
+  }
+  
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+});
+
+ </script> 
 </body>
 </html>
