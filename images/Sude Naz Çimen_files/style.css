@@ -1,0 +1,71 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+  body{
+    min-height: 100vh;
+  }
+
+  
+
+  /*şehrim*/
+  .images{
+    position:absolute;
+    width: 90%;
+    display: grid;
+    top: 2%;
+    left: 5%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,300px);
+    gap: 10px;
+  }
+  .images img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    margin: auto;
+  }
+  @media(max-width:700px){
+    .images{
+        grid-template-columns: repeat(1,auto);
+    }
+    .images img{
+        width: 90vw;
+    }
+  }
+  
+
+
+
+/* Anasayfa*/
+.inner_anasayfa{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%;
+  color: #000;
+}
+.child_anasaya{
+  flex-basis: 40%;
+}
+.child_anasayfa h1 {
+  font-size: 30px;
+  color:black;
+}
+.span_child{
+  color: rgb(61, 2, 170);
+}
+.child_anasayfa p {
+font-size: 20px;
+margin-bottom: 10px;
+}
+/*hakkında*/
