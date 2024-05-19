@@ -21,7 +21,7 @@ body{
     padding: 0 15px 0 15px;
 }
 header{
-    color:lavender;
+    color:rgb(6, 63, 114);
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -36,12 +36,12 @@ header{
     width: 80%;
     border: none;
     border-radius: 20px;
-    color: #fff;
+    color:black;
     padding: 0 0 0 45px;
     background: rgba(255, 255, 255, 0.1);
 }
 ::-webkit-input-placeholder{
-    color: #fff;
+    color:black;
 }
 .submit{
     border: none;
